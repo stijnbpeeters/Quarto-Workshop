@@ -1,0 +1,21 @@
+# RStudio files
+.Rproj.user
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+/.quarto/
+.DS_Store
+
+# All outputs
+_site/
+_freeze/
+data/output/questionnaire/*
+.json
