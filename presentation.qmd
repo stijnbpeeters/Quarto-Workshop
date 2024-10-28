@@ -1,6 +1,6 @@
 ---
 title: "👋 Welcome to the Quarto workshop"
-subtitle: "Subtitle"
+subtitle: "Create reproducible reports and presentations with Quarto"
 author: "Stijn Peeters & Frederick Thielen"
 footer: "ESHPM day 2024"
 date: "07 November 2024"
@@ -8,6 +8,7 @@ format:
   revealjs:
     reference-location: document
     css: styles.css
+    logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.digitalmarketingrbs.nl%2Fwp-content%2Fuploads%2F2020%2F10%2FLogo_Erasmus_Universiteit_Rotterdam.svg.png&f=1&nofb=1&ipt=00db2adccfd8c4b13333b0d509fd41c35bd76fea173e79d0644cb6e308a470d0&ipo=images"
 editor_options: 
   chunk_output_type: console
 ---
@@ -19,81 +20,133 @@ editor_options:
 **Deze aanpassen**
 
 ::: {style="font-size: 55%;"}
-+---------------+-------------------------------------------+-----------------------------------------+
-| Time          | Title                                     | Description                             |
-+===============+===========================================+=========================================+
-| 13:00 - 13:20 | **👋 Welcome, recap, Q&A**                |                                         |
-+---------------+-------------------------------------------+-----------------------------------------+
-| 13:20 - 13:30 | 📝 Mastering Markdown                     | A crash course in text formatting magic |
-+---------------+-------------------------------------------+-----------------------------------------+
-| 13:30 - 14:10 | 📚 [Tutorial: Use/reuse](3_use_reuse.qmd) | With neighbour: hands-on tutorial       |
-+---------------+-------------------------------------------+-----------------------------------------+
-| 14:10 - 14:25 | ☕️ Break                                  |                                         |
-+---------------+-------------------------------------------+-----------------------------------------+
-| 14:25 - 15:45 | 📑 Group work                             | Analyse your data                       |
-+---------------+-------------------------------------------+-----------------------------------------+
-| 15:45 - 16:00 | ☕️ Break                                  |                                         |
-+---------------+-------------------------------------------+-----------------------------------------+
-| 16:00 - 16:30 | 🎤 Group work presentation                | Preliminary results (2 min/group)       |
-+---------------+-------------------------------------------+-----------------------------------------+
-| 16:30 - 17:00 | 💬 Closing and look-out on next day       |                                         |
-+---------------+-------------------------------------------+-----------------------------------------+
-|               |                                           |                                         |
-+---------------+-------------------------------------------+-----------------------------------------+
++---------------+-------------------------------------+------------------------------------+
+| Time          | Title                               | Description                        |
++===============+=====================================+====================================+
+| 14:30 - 14:35 | 👋 Welcome and introduction         |                                    |
++---------------+-------------------------------------+------------------------------------+
+| 14:35 - 14:45 | 🔥 Warming-up with an 🧊 icebreaker | Showcasing a Shiny App integration |
++---------------+-------------------------------------+------------------------------------+
+| 14:45 - 14:50 | 🫵 Why are you here?                | Expectation management             |
++---------------+-------------------------------------+------------------------------------+
+| 14:50 - 15:00 | 👓 What you see and what you want   | WYSIWYG versus WYSIWYM             |
++---------------+-------------------------------------+------------------------------------+
+| 15:00 - 14:10 | 📝 Mastering Markdown               | Getting to know the basics         |
++---------------+-------------------------------------+------------------------------------+
 
 : Today's session {tbl-colwidths="\[20,35,45\]"}
 :::
 
 ## 🔥 Warming-up with an 🧊 icebreaker
 
-```{=html}
- <iframe id="example1" src="https://5hoc60-frederick0thielen.shinyapps.io/icebreaker/" style="border: none; width: 100%; height: 520px" frameborder="0"></iframe>
-```
-# 📝 Mastering Markdown
+<iframe id="example1" src="https://5hoc60-frederick0thielen.shinyapps.io/icebreaker/" style="border: none; width: 100%; height: 520px" frameborder="0">
+
+</iframe>
+
+## 🫵 Why are you here?
+
+-   What are you hoping to learn today?
+-   What are you hoping to achieve with Quarto?
+-   What are your expectations for today's session?
+
+
+::: {.fragment}
+Goals of this session:
+
+-  Understand the basics of Quarto
+-  Learn how to create reproducible reports and presentations
+-  Get familiar with the Quarto ecosystem
+:::
+
+
+# 👓 What you see and what you want
 
 ## What you see is what you get (WYSIWYG)
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 <br>
 
-> Software allowing content to be *edited* in a form that *resembles its appearance* when printed or displayed as a finished product
+> Software that enables content to be *edited* in a way that closely *resembles its final appearance* when printed or displayed.
 :::
 
 ::: {.column width="50%"}
 ![](https://live.staticflickr.com/2645/3953478168_25a5db04c5_c.jpg)
 :::
-:::
+:::::
 
 ## WYSIWYG: advantages and limitations
 
 <br>
 
 ::: {style="font-size: 80%;"}
-+---------------------------------+-------------------------------------------+
-| Advantages                      | Limitations                               |
-+=================================+===========================================+
-| User-Friendly Interface         | Limited Precision and Customisation       |
-+---------------------------------+-------------------------------------------+
-| Immediate Visual Feedback       | Reproducibility Issues                    |
-+---------------------------------+-------------------------------------------+
-| No Coding Required              | Challenging Version Control               |
-+---------------------------------+-------------------------------------------+
-| Quick Layouts and Formatting    | Poor Scalability                          |
-+---------------------------------+-------------------------------------------+
-| Accessibility for Non-Technical | Lack of Integration with Scientific Tools |
-+---------------------------------+-------------------------------------------+
-| Integrated Media Management     | Dependency on Specific Software           |
-+---------------------------------+-------------------------------------------+
-| Software Integration            | Limited Automation                        |
-+---------------------------------+-------------------------------------------+
++---------------------------------------+-------------------------------------------+
+| Advantages                            | Limitations                               |
++=======================================+===========================================+
+| User-friendly interface               | Limited precision and customisation       |
++---------------------------------------+-------------------------------------------+
+| Immediate visual feedback             | Reproducibility issues                    |
++---------------------------------------+-------------------------------------------+
+| No coding required                    | Challenging version control               |
++---------------------------------------+-------------------------------------------+
+| Quick layouts and formatting          | Poor scalability                          |
++---------------------------------------+-------------------------------------------+
+| Accessibility for non-technical users | Lack of integration with scientific tools |
++---------------------------------------+-------------------------------------------+
+:::
+
+## WYSIWYM: what you see is what you mean
+
+::::: columns
+::: {.column width="50%"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/ViewsIceberg.svg/1920px-ViewsIceberg.svg.png)
+
+:::
+
+::: {.column width="50%"}
+<br>
+
+> Software that enables content to be *edited* in a way that focuses on *semantic structure*, rather than its final appearance.
+:::
+:::
+
+## What are semantics in this context?
+
+**Semantics** refers to the meaning of a piece of content, rather than its appearance. Like:
+
+-   *Headings* to defined sections and subsections
+-   *Lists* like bullet points and numbered lists
+-   *Tables* & *Figures*
+-   *Citations*
+-   *Code blocks*
+-   *Equations*
+
+## WYSIWYM: advantages and limitations
+
+<br>
+
+::: {style="font-size: 80%;"}
++---------------------------------------+-----------------------------------------------+
+| Advantages                            | Limitations                                   |
++=======================================+===============================================+
+| Emphasises content structure          |  Requires familiarity with markup             |
++---------------------------------------+-----------------------------------------------+
+| Ensures semantic consistency          | No immediate visual feedback                  |
++---------------------------------------+-----------------------------------------------+
+| Highly reproducible                   | Limited flexibility for visual customisation  |
++---------------------------------------+-----------------------------------------------+
+| Supports version control              | Higher learning curve for new users           |
++---------------------------------------+-----------------------------------------------+
+| Ideal for large, complex documents    | May require post-editing for final formatting |
++---------------------------------------+-----------------------------------------------+
 :::
 
 ## Pouring milk
 
 A straight-forward task - pour the boxed milk into the glass.
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 > Easy to use
 
@@ -102,13 +155,13 @@ A straight-forward task - pour the boxed milk into the glass.
 
 ::: {.column width="50%"}
 :::
-:::
+:::::
 
 ## Pouring milk
 
 A straight-forward task - pour the boxed milk into the glass.
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 > Easy to use
 
@@ -120,7 +173,7 @@ A straight-forward task - pour the boxed milk into the glass.
 
 ![](https://j.gifs.com/z6BO57.gif){width="750px"}
 :::
-:::
+:::::
 
 ## Early alternatives to WYSIWYG
 
@@ -136,7 +189,7 @@ A straight-forward task - pour the boxed milk into the glass.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/1/1c/Emacs-screenshot-with-PNML.png){fig-align="center"}
 
-## Developments {visibility="hidden"}
+## Developments
 
 1990s: **HTML** (Tim Berners-Lee)
 
@@ -146,7 +199,7 @@ A straight-forward task - pour the boxed milk into the glass.
 
 ## Markdown
 
-2004: **Markdown** (John Gruber); **lightweight markup language** with plain-text-formatting syntax
+2004: **Markdown** (John Gruber); *lightweight markup language* with plain-text-formatting syntax
 
 -   Designed for easy readability and writability
 -   Converts plain text to rich text (HTML)
@@ -167,6 +220,8 @@ A straight-forward task - pour the boxed milk into the glass.
 -   Can include SQL, Python, and other languages
 -   Filename extensions: `.Rmd`, `.Rmarkdown`
 
+# 📝 Mastering Markdown
+
 ## How does RMarkdown work?
 
 ![](https://rstudio-conf-2022.github.io/get-started-quarto/materials/images/rmd-knitr.png)
@@ -185,19 +240,38 @@ Its workflow is:
 
 <br>
 
-Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`)
+-   Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`)
 
 OR
 
-mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more
+-   mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more
+
+## Quarto is a "translator"
+
+![Figure by [Allison Horst](https://allisonhorst.com/)](https://ucsb-meds.github.io/creating-quarto-websites/media/quarto_schematic.png)
 
 ## Quarto works with `knitr`
 
 ![](https://rstudio-conf-2022.github.io/get-started-quarto/materials/images/qmd-knitr.png)
 
-## Quarto works with `jupyter` {visibility="hidden"}
+## Quarto works with `jupyter`
 
 ![](https://rstudio-conf-2022.github.io/get-started-quarto/materials/images/jupyter-alone.png)
+
+## I already use RMarkdown, can I leave now?
+
+Better not! Here are some reasons why you [should switch](https://www.schlosslab.org/quarto_code_club/quarto_intro.html):
+
+1. **Reduced dependencies**: Quarto includes many features out-of-the-box (e.g., TeX integration)
+2. **Quarto is likely to become the new standard**: Many new features likely only for Quarto
+3. **Switching is easy**: Quarto is compatible with RMarkdown
+
+## Quarto: the official portal
+
+{{< fa display >}} [https://quarto.org](https://quarto.org)
+```{=html}
+<iframe width="100%" height="75%" src="https://quarto.org" title="quarto.org"></iframe>
+```
 
 ## Quarto in RStudio
 
@@ -207,18 +281,32 @@ mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, boo
 
 ![](https://quarto.org/docs/computations/images/python-vscode.png){fig-align="center"}
 
-## Benefits of Quarto (and RMarkdown)
+## Benefits of Quarto (and RMarkdown) {.smaller}
 
--   ✂ Eliminate need for copy-pasting
--   🤷‍♀️ No more manual piecing together analyses
--   🔄 No more nightmares when the data is updated and analyses need to re-run
--   📊 No more static reports that are out of date the moment they are created
--   📚 No need to maintain separate code and documentation
--   📈 No need to manually update figures and tables in a report
+<br>
+
+:::{columns}
+:::{.column width="50%"}
+
+
+![](https://media1.tenor.com/m/VPwzFiDL2a4AAAAC/jack-nicholson-nonono.gif)
+:::
+
+:::{.column width="50%"}
+-  ✂️ Copy-pasting
+-   🤷️ Manualyl piecing together analyses
+-   🔄 Nightmares when the data is updated and analyses need to re-run
+-   📊 Static reports that are out of date the moment they are created
+-   📚 Maintaining separate code and documentation
+-   📈 Manually updating figures & tables in a report
+
+:::
+:::
 
 ## Possibilities with Quarto
 
 -   Manuscripts
+
 -   Books
 
 ::: {.fragment .highlight-red}
@@ -233,11 +321,13 @@ mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, boo
 -   Reports
 :::
 
+::: {style="text-align: center;"}
 # **Static Quarto Reports** {.background-slide-static}
+:::
 
 ## Change the way you work
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ````         
 ---
@@ -274,24 +364,27 @@ ggplot(airquality, aes(Temp, Ozone)) +
 ::: {.column width="50%"}
 ![](https://quarto.org/images/hello-knitr.png)
 :::
-:::
+:::::
 
-## Our workhorse: HTML 🏇
+## Our workhorse: HTML 🏇 {.column-screen}
 
-<iframe src="https://quarto.org/docs/output-formats/html-basics.html" width="1000" height="700">
+<iframe src="https://quarto.org/docs/output-formats/html-basics.html" width="1000" height="550">
 
 </iframe>
 
-## Anatomy of a Quarto document - YAML
+## Anatomy of a Quarto doc - YAML
 
-The [YAML](https://yaml.org/) metadata or header is:
+[YAML](https://yaml.org/)  = Yet Another Markup Language:
 
-> processed in many stages of the rendering process and can influence the final document in many different ways. It is placed at the very beginning of the document and is read by each of Pandoc, Quarto and `knitr`. Along the way, the information that it contains can affect the code, content, and the rendering process.
+- **Purpose**: Configures document metadata and settings.
+- **Location**: Placed at the very top of the document.
+- **Structure**: Uses key-value pairs in a plain text format.
+- **Common Keys**: `title`, `author`, `date`, `output`
 
-## Anatomy of a Quarto document - YAML
+## Anatomy of a Quarto doc - YAML {.smaller}
 
-::: columns
-::: {.column width="50%"}
+::::: columns
+::: {.column width="40%"}
 Fairly simple
 
 ``` yaml
@@ -303,7 +396,9 @@ format:
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
+Or more complex
+
 ``` yaml
 title: This is the title
 subtitle: Quite a subtitle
@@ -328,12 +423,43 @@ format:
         prefer-html: true
 ```
 :::
+:::::
+
+## 💻 Your turn (1)
+
+<br>
+
+:::::: {style="font-size: 70%;"}
+::::: columns
+::: {.column width="50%"}
+1.  Create an *empty* .qmd file
+2.  Add a YAML header with the following:
+
+``` yaml
+---
+title: "My Document"
+format: 
+  html:
+---
+```
+
+3.  Render the document
 :::
 
+::: {.column width="50%"}
+4.  (Optionally) add some more YAML arguments like:
 
-# 💻Your turn
-
--   Create an HTML report in Quarto with title: "Quarto Workshop PhD day"
+``` yaml
+title: This is the title
+subtitle: Quite a subtitle
+date: today
+author: 
+    - name: Quite a name
+      email: quiteaname@test.com
+```
+:::
+:::::
+::::::
 
 <button id="start-timer" class="custom-button">
 
@@ -344,7 +470,6 @@ Start 3:00 Timer
 ::: {#countdown style="font-size: 2em; margin-top: 20px;"}
 :::
 
-```{=html}
 <script>
 let countdownElement = document.getElementById('countdown');
 let button = document.getElementById('start-timer');
@@ -366,28 +491,28 @@ button.addEventListener('click', function() {
   }, 1000);
 });
 </script>
-```
+
 ## Text Formatting
 
-+----------------------------------+-------------------------------+
-| Markdown Syntax                  | Output                        |
-+==================================+===============================+
-| ```                              | *italics* and **bold**        |
-| *italics* and **bold**           |                               |
-| ```                              |                               |
-+----------------------------------+-------------------------------+
-| ```                              | superscript^2^ / subscript~2~ |
-| superscript^2^ / subscript~2~    |                               |
-| ```                              |                               |
-+----------------------------------+-------------------------------+
-| ```                              | ~~strikethrough~~             |
-| ~~strikethrough~~                |                               |
-| ```                              |                               |
-+----------------------------------+-------------------------------+
-| ```                              | `verbatim code`               |
-| `verbatim code`                  |                               |
-| ```                              |                               |
-+----------------------------------+-------------------------------+
++-------------------------------+-------------------------------+
+| Markdown Syntax               | Output                        |
++===============================+===============================+
+| ```                           | *italics* and **bold**        |
+| *italics* and **bold**        |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | superscript^2^ / subscript~2~ |
+| superscript^2^ / subscript~2~ |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | ~~strikethrough~~             |
+| ~~strikethrough~~             |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | `verbatim code`               |
+| `verbatim code`               |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
 
 ## Headings
 
@@ -423,8 +548,9 @@ button.addEventListener('click', function() {
 
 ## Embed code
 
--   Huge range of possibilities
--   As long as it starts with `{} and ends with`
+Huge range of possibilities
+-   As long as it starts with ```` ```{} ```` and ends with ```` ``` ````
+-   Between the braces, specify the code language (e.g., ```` ```{r} ```` for R code)
 
 ## Example of R code embedded
 
@@ -458,11 +584,11 @@ ggplot(airquality, aes(Temp, Ozone)) +
 #| error: false
 ```
 
-# 💻 Your turn
+## 💻 Your turn (2)
 
--   Download `Exercise 2.qmd` at `https://github.com/stijnbpeeters/Quarto-Workshop/Exercises/Exercise 2.qmd` to your R
+1.  Download `Exercise 2.qmd` at **bit.ly/eshpm-quarto** and open it in RStudio
 
--   Complete the exercises and try rendering the document.
+2.  Complete the exercises in the document and try rendering it.
 
 <button id="start-timer" class="custom-button">
 
@@ -473,7 +599,6 @@ Start 10:00 Timer
 ::: {style="font-size: 2em; margin-top: 20px;"}
 :::
 
-```{=html}
 <script>
 let countdownElement = document.getElementById('countdown');
 let button = document.getElementById('start-timer');
@@ -495,21 +620,21 @@ button.addEventListener('click', function() {
   }, 1000);
 });
 </script>
-```
+
 # 🤔 Questions?
 
-# Presentations {.background-slide-presentation}
----
-![](Images/MP.gif)
+## \# Presentations {.background-slide-presentation}
 
+![](Images/MP.gif)
 
 ## Quarto presentation formats
 
 ::: {.fragment .highlight-red}
--   revealjs
+-   **revealjs**
 :::
--   `beamer` for LaTex slides
--   Powerpoint for when you **have** to collaborate via **office** 😒
+
+-   **beamer** for LaTex slides
+-   Powerpoint for when you **have** to collaborate via **Office** 😒
 
 ## revealjs
 
@@ -533,26 +658,26 @@ format: revealjs
 
 ![](Images/easy.gif)
 
-# 💻 Short Exercise
-Turn the recently revised document into a presentation rather than a report. Use the same title and the chapter names as slide titles.
+## 💻 Short Exercise (3)
+
+1.  Turn the last document into a presentation rather than a report. Use the same title and the chapter names as slide titles.
 
 <button id="start-timer" class="custom-button">
 
-Start 3:00 Timer
+Start 4:00 Timer
 
 </button>
 
 ::: {style="font-size: 2em; margin-top: 20px;"}
 :::
 
-```{=html}
 <script>
 let countdownElement = document.getElementById('countdown');
 let button = document.getElementById('start-timer');
 let countdown;
 
 button.addEventListener('click', function() {
-  let time = 180; // 3 minutes in seconds
+  let time = 240; // 3 minutes in seconds
   countdown = setInterval(function() {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
@@ -567,21 +692,24 @@ button.addEventListener('click', function() {
   }, 1000);
 });
 </script>
-```
-## Some features of revealjs
 
+## Some features of revealjs
 
 ## Some extra's for presentations
 
 ## Long exercise
+
 Do we have time for this?
 
-
-
-
-
-
 ## Topics worth exploring
+
+
+## Quarto advanced and further readings
+
+- [Quarto: The Definitive Guide](https://quarto-tdg.org/)
+- [Introduction to Quarto presentation](https://lennartwittkuhn.com/quarto-workshop/#/title-slide)
+- [Literate programming in R](https://elixir-europe-training.github.io/ELIXIR-TrP-LiterateProgrammingR-CodeRep/)
+- Add [fontawesome](https://fontawesome.com/) icons to your Quarto with a [lua filter](https://github.com/quarto-ext/fontawesome?tab=readme-ov-file)
 
 ::: {style="font-size: 85%;"}
 ### Before further embarking on the Quarto journey
