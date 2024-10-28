@@ -1,0 +1,25 @@
+section.background-slide-static {
+  background-image: url('Images/static-document.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+section.background-slide-presentation {
+  background-image: url('Images/presentation.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-button {
+  background-color: purple/* Purple */
+  border: none
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 40px;
+}

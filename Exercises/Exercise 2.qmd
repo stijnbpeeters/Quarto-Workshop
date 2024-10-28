@@ -1,0 +1,31 @@
+This is the Amazing World of Woodland Creatures. <!-- Start by making this the title of this document -->
+
+<!-- Start this section with a level 2 header titled "Woodland Animals.-->
+
+In the woodlands, many animals exhibit unique habits and characteristics. Let's explore some of these fascinating creatures. 
+
+One of the most clever creatures is the fox <!-- write fox in bold -->. Foxes are known for their intelligence and adaptability. To illustrate this, here's a sample code snippet that describes the fox's traits. 
+
+<!-- Display both by code and the result in your output.
+
+fox_traits <- c("clever", "quick", "cunning") 
+print(fox_traits) 
+
+-->
+
+
+Another familiar face in the woodland is the hedgehog. <!-- This section should start with a level 3 header named "The Hedgehog" --> Hedgehogs <!-- write 'Hedgehogs' in Italic --> are famous for curling into a spiky ball when threatened. 
+
+<!-- Use a code chunk to print a message that says, "The hedgehog curls up!" Show only the result, not the code. -->
+
+Now let's discuss Squirrels, energetic creatures that are constantly on the move. <!-- Add a level 4 header titled "Squirrels in Action." -->
+
+Squirrels <!-- Underline `Squirrels` --> in  spend hours each day gathering food. 
+
+<!--Here's a code snippet that calculates the number of acorns a squirrel gathers in a day, assuming it gathers 5 acorns per hour for 8 hours. Hide the code but display only the total acorns gathered.
+
+acorns_per_hour <- 5 
+total_acorns <- acorns_per_hour * 8 total_acorns
+
+--> 
+

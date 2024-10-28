@@ -7,27 +7,41 @@ date: "07 November 2024"
 format: 
   revealjs:
     reference-location: document
+    css: styles.css
 editor_options: 
   chunk_output_type: console
 ---
 
 ## ☀️ Our session today
+
+------------------------------------------------------------------------
+
+**Deze aanpassen**
+
 ::: {style="font-size: 55%;"}
++---------------+-------------------------------------------+-----------------------------------------+
+| Time          | Title                                     | Description                             |
++===============+===========================================+=========================================+
+| 13:00 - 13:20 | **👋 Welcome, recap, Q&A**                |                                         |
++---------------+-------------------------------------------+-----------------------------------------+
+| 13:20 - 13:30 | 📝 Mastering Markdown                     | A crash course in text formatting magic |
++---------------+-------------------------------------------+-----------------------------------------+
+| 13:30 - 14:10 | 📚 [Tutorial: Use/reuse](3_use_reuse.qmd) | With neighbour: hands-on tutorial       |
++---------------+-------------------------------------------+-----------------------------------------+
+| 14:10 - 14:25 | ☕️ Break                                  |                                         |
++---------------+-------------------------------------------+-----------------------------------------+
+| 14:25 - 15:45 | 📑 Group work                             | Analyse your data                       |
++---------------+-------------------------------------------+-----------------------------------------+
+| 15:45 - 16:00 | ☕️ Break                                  |                                         |
++---------------+-------------------------------------------+-----------------------------------------+
+| 16:00 - 16:30 | 🎤 Group work presentation                | Preliminary results (2 min/group)       |
++---------------+-------------------------------------------+-----------------------------------------+
+| 16:30 - 17:00 | 💬 Closing and look-out on next day       |                                         |
++---------------+-------------------------------------------+-----------------------------------------+
+|               |                                           |                                         |
++---------------+-------------------------------------------+-----------------------------------------+
 
-| Time          | Title      | Description                |
-|-----------------|----------------------------|----------------------------|
-| 13:00 - 13:20 | **👋 Welcome, recap, Q&A**       |                 |
-| 13:20 - 13:30 | 📝 Mastering Markdown | A crash course in text formatting magic |
-| 13:30 - 14:10 | 📚 [Tutorial: Use/reuse](3_use_reuse.qmd)  | With neighbour: hands-on tutorial |
-| 14:10 - 14:25 | ☕️ Break                      |                 |
-| 14:25 - 15:45 | 📑 Group work |  Analyse your data |
-| 15:45 - 16:00 | ☕️ Break                      |                 |
-| 16:00 - 16:30 | 🎤 Group work presentation  | Preliminary results (2 min/group) |
-| 16:30 - 17:00 | 💬 Closing and look-out on next day            |           |
-|
-
-: Today's session {tbl-colwidths="[20,35,45]"}
-
+: Today's session {tbl-colwidths="\[20,35,45\]"}
 :::
 
 ## 🔥 Warming-up with an 🧊 icebreaker
@@ -35,42 +49,44 @@ editor_options:
 ```{=html}
  <iframe id="example1" src="https://5hoc60-frederick0thielen.shinyapps.io/icebreaker/" style="border: none; width: 100%; height: 520px" frameborder="0"></iframe>
 ```
-
 # 📝 Mastering Markdown
 
 ## What you see is what you get (WYSIWYG)
 
-:::{.columns}
-
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 <br>
 
 > Software allowing content to be *edited* in a form that *resembles its appearance* when printed or displayed as a finished product
-
 :::
 
-:::{.column width="50%"}
+::: {.column width="50%"}
 ![](https://live.staticflickr.com/2645/3953478168_25a5db04c5_c.jpg)
 :::
 :::
 
 ## WYSIWYG: advantages and limitations
 
-<br> 
+<br>
 
 ::: {style="font-size: 80%;"}
-
-| Advantages                     | Limitations                        |
-|--------------------------------|------------------------------------|
-| User-Friendly Interface        | Limited Precision and Customisation|
-| Immediate Visual Feedback      | Reproducibility Issues             |
-| No Coding Required             | Challenging Version Control        |
-| Quick Layouts and Formatting   | Poor Scalability                   |
-| Accessibility for Non-Technical| Lack of Integration with Scientific Tools|
-| Integrated Media Management    | Dependency on Specific Software    |
-| Software Integration           | Limited Automation                 |
-
++---------------------------------+-------------------------------------------+
+| Advantages                      | Limitations                               |
++=================================+===========================================+
+| User-Friendly Interface         | Limited Precision and Customisation       |
++---------------------------------+-------------------------------------------+
+| Immediate Visual Feedback       | Reproducibility Issues                    |
++---------------------------------+-------------------------------------------+
+| No Coding Required              | Challenging Version Control               |
++---------------------------------+-------------------------------------------+
+| Quick Layouts and Formatting    | Poor Scalability                          |
++---------------------------------+-------------------------------------------+
+| Accessibility for Non-Technical | Lack of Integration with Scientific Tools |
++---------------------------------+-------------------------------------------+
+| Integrated Media Management     | Dependency on Specific Software           |
++---------------------------------+-------------------------------------------+
+| Software Integration            | Limited Automation                        |
++---------------------------------+-------------------------------------------+
 :::
 
 ## Pouring milk
@@ -116,7 +132,7 @@ A straight-forward task - pour the boxed milk into the glass.
 
 1980s: **SGML** (Standard Generalized Markup Language)
 
-- Standard for defining generalized markup languages for documents (ISO 8879:1986) 
+-   Standard for defining generalized markup languages for documents (ISO 8879:1986)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/1/1c/Emacs-screenshot-with-PNML.png){fig-align="center"}
 
@@ -124,7 +140,7 @@ A straight-forward task - pour the boxed milk into the glass.
 
 1990s: **HTML** (Tim Berners-Lee)
 
-- Standard markup language for documents designed to be displayed in a web browser
+-   Standard markup language for documents designed to be displayed in a web browser
 
 ![](https://live.staticflickr.com/3194/3032843606_53d11bda96_w.jpg){fig-align="center"}
 
@@ -132,25 +148,24 @@ A straight-forward task - pour the boxed milk into the glass.
 
 2004: **Markdown** (John Gruber); **lightweight markup language** with plain-text-formatting syntax
 
-- Designed for easy readability and writability
-- Converts plain text to rich text (HTML)
-- Widely used for documentation, note-taking, and web content creation
-- Syntax for formatting text includes headers, lists, emphasis, links, and images
-- Filename extensions: `.md`, `.markdown`
+-   Designed for easy readability and writability
+-   Converts plain text to rich text (HTML)
+-   Widely used for documentation, note-taking, and web content creation
+-   Syntax for formatting text includes headers, lists, emphasis, links, and images
+-   Filename extensions: `.md`, `.markdown`
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/175px-Markdown-mark.svg.png){.absolute top=10 right=0 width=10%}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/175px-Markdown-mark.svg.png){.absolute top="10" right="0" width="10%"}
 
 ## RMarkdown
 
 2012: **RMarkdown** (Yihui Xie)
 
-- Integrates R code chunks within Markdown documents
-- Enables execution of R code to generate plots, tables, and analysis results dynamically
-- Supported outputs: HTML, PDF, Word, and slideshows
-- Facilitates reproducible research and data-driven storytelling by combining narrative, code, and output 
-- Can include SQL, Python, and other languages
-- Filename extensions: `.Rmd`, `.Rmarkdown`
-
+-   Integrates R code chunks within Markdown documents
+-   Enables execution of R code to generate plots, tables, and analysis results dynamically
+-   Supported outputs: HTML, PDF, Word, and slideshows
+-   Facilitates reproducible research and data-driven storytelling by combining narrative, code, and output
+-   Can include SQL, Python, and other languages
+-   Filename extensions: `.Rmd`, `.Rmarkdown`
 
 ## How does RMarkdown work?
 
@@ -162,15 +177,15 @@ A straight-forward task - pour the boxed milk into the glass.
 
 Its workflow is:
 
-1. load data
-2. perform data processing
-3. create output data or output graphics
+1.  load data
+2.  perform data processing
+3.  create output data or output graphics
 
 ## The future is now: Quarto
 
 <br>
 
-Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`) 
+Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`)
 
 OR
 
@@ -178,12 +193,9 @@ mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, boo
 
 ## Quarto works with `knitr`
 
-
 ![](https://rstudio-conf-2022.github.io/get-started-quarto/materials/images/qmd-knitr.png)
 
 ## Quarto works with `jupyter` {visibility="hidden"}
-
-
 
 ![](https://rstudio-conf-2022.github.io/get-started-quarto/materials/images/jupyter-alone.png)
 
@@ -193,50 +205,70 @@ mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, boo
 
 ## Quarto with jupyter {visibility="hidden"}
 
-
 ![](https://quarto.org/docs/computations/images/python-vscode.png){fig-align="center"}
 
 ## Benefits of Quarto (and RMarkdown)
 
-- ✂ Eliminate need for copy-pasting
-- 🤷‍♀️ No more manually pieicng together analyses
-- 🔄 No more nightmares when the data is updated and analyses need to re-run
-- 📊 No more static reports that are out of date the moment they are created
-- 📚 No need to maintain separate code and documentation
-- 📈 No need to manually update figures and tables in a report
+-   ✂ Eliminate need for copy-pasting
+-   🤷‍♀️ No more manual piecing together analyses
+-   🔄 No more nightmares when the data is updated and analyses need to re-run
+-   📊 No more static reports that are out of date the moment they are created
+-   📚 No need to maintain separate code and documentation
+-   📈 No need to manually update figures and tables in a report
+
+## Possibilities with Quarto
+
+-   Manuscripts
+-   Books
+
+::: {.fragment .highlight-red}
+-   Presentations
+:::
+
+-   Websites
+
+-   Dashboards
+
+::: {.fragment .highlight-red}
+-   Reports
+:::
+
+# **Static Quarto Reports** {.background-slide-static}
 
 ## Change the way you work
 
 ::: columns
 ::: {.column width="50%"}
-    ---
-    title: "ggplot2 demo"
-    author: "Norah Jones"
-    date: "5/22/2021"
-    format: 
-      html:
-        fig-width: 8
-        fig-height: 4
-        code-fold: true
-    ---
+````         
+---
+title: "ggplot2 demo"
+author: "Norah Jones"
+date: "5/22/2021"
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
 
-    ## Air Quality
+## Air Quality
 
-    @fig-airquality further explores the impact of temperature 
-      on ozone level.
+@fig-airquality further explores the impact of temperature 
+  on ozone level.
 
-    ```{{r}}
-    #| label: fig-airquality
-    #| fig-cap: Temperature and ozone level.
-    #| warning: false
+```{{r}}
+#| label: fig-airquality
+#| fig-cap: Temperature and ozone level.
+#| warning: false
 
-    library(ggplot2)
-    ggplot(airquality, aes(Temp, Ozone)) + 
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
 
-      geom_point() + 
-      geom_smooth(method = "loess"
-    )
-    ```
+  geom_point() + 
+  geom_smooth(method = "loess"
+)
+```
+````
 :::
 
 ::: {.column width="50%"}
@@ -244,106 +276,159 @@ mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, boo
 :::
 :::
 
-## Anatomy of a Quarto document
+## Our workhorse: HTML 🏇
 
-::: {style="font-size: 85%;"}
+<iframe src="https://quarto.org/docs/output-formats/html-basics.html" width="1000" height="700">
 
--   Metadata (YAML)
+</iframe>
 
-``` yaml
----
-format: html
----
-```
-:::
-
-. . .
-
-::: {style="font-size: 85%;"}
-
--   Code
-
-```{r}
-#| echo: fenced
-#| eval: true
-library(dplyr)
-mtcars %>% 
-  group_by(cyl) %>%
-  summarize(mean = mean(mpg), .groups = "drop")
-```
-
-:::
-
-## Anatomy of a Quarto document
-
--   Text
-
-``` markdown
-# Heading 1
-This is a sentence with some **bold text**, some *italic text* and an [image](image.png).
-```
-
-
-## Metadata: YAML {visibility="hidden"}
-
+## Anatomy of a Quarto document - YAML
 
 The [YAML](https://yaml.org/) metadata or header is:
 
 > processed in many stages of the rendering process and can influence the final document in many different ways. It is placed at the very beginning of the document and is read by each of Pandoc, Quarto and `knitr`. Along the way, the information that it contains can affect the code, content, and the rendering process.
 
-## YAML {visibility="hidden"}
+## Anatomy of a Quarto document - YAML
 
+::: columns
+::: {.column width="50%"}
+Fairly simple
 
 ``` yaml
 ---
 title: "My Document"
 format: 
   html:
-    toc: true
-    code-fold: true
 ---
 ```
+:::
+
+::: {.column width="50%"}
+``` yaml
+title: This is the title
+subtitle: Quite a subtitle
+date: today
+author: 
+    - name: Quite a name
+      email: quiteaname@test.com
+
+toc: true
+toc-depth: 1
+bibliography: biblio.bib
+
+format:
+    html:
+        theme:
+            light:
+                - cosmo
+                - scss/custom.scss
+            dark: darkly
+        embed-resources: true
+    pdf:
+        prefer-html: true
+```
+:::
+:::
 
 
+# 💻Your turn
+
+-   Create an HTML report in Quarto with title: "Quarto Workshop PhD day"
+
+<button id="start-timer" class="custom-button">
+
+Start 3:00 Timer
+
+</button>
+
+::: {#countdown style="font-size: 2em; margin-top: 20px;"}
+:::
+
+```{=html}
+<script>
+let countdownElement = document.getElementById('countdown');
+let button = document.getElementById('start-timer');
+let countdown;
+
+button.addEventListener('click', function() {
+  let time = 180; // 3 minutes in seconds
+  countdown = setInterval(function() {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    countdownElement.innerHTML = minutes + ':' + seconds;
+    time--;
+
+    if (time < 0) {
+      clearInterval(countdown);
+      countdownElement.innerHTML = "Time's up!";
+    }
+  }, 1000);
+});
+</script>
+```
 ## Text Formatting
 
-+-----------------------------------+-------------------------------+
-| Markdown Syntax                   | Output                        |
-+===================================+===============================+
-|     *italics* and **bold**        | *italics* and **bold**        |
-+-----------------------------------+-------------------------------+
-|     superscript^2^ / subscript~2~ | superscript^2^ / subscript~2~ |
-+-----------------------------------+-------------------------------+
-|     ~~strikethrough~~             | ~~strikethrough~~             |
-+-----------------------------------+-------------------------------+
-|     `verbatim code`               | `verbatim code`               |
-+-----------------------------------+-------------------------------+
++----------------------------------+-------------------------------+
+| Markdown Syntax                  | Output                        |
++==================================+===============================+
+| ```                              | *italics* and **bold**        |
+| *italics* and **bold**           |                               |
+| ```                              |                               |
++----------------------------------+-------------------------------+
+| ```                              | superscript^2^ / subscript~2~ |
+| superscript^2^ / subscript~2~    |                               |
+| ```                              |                               |
++----------------------------------+-------------------------------+
+| ```                              | ~~strikethrough~~             |
+| ~~strikethrough~~                |                               |
+| ```                              |                               |
++----------------------------------+-------------------------------+
+| ```                              | `verbatim code`               |
+| `verbatim code`                  |                               |
+| ```                              |                               |
++----------------------------------+-------------------------------+
 
 ## Headings
 
 ::: {style="font-size: 80%;"}
-+---------------------+-----------------+
-| Markdown Syntax     | Output          |
-+=====================+=================+
-|     # Header 1      | # Header 1      |
-+---------------------+-----------------+
-|     ## Header 2     | ## Header 2     |
-+---------------------+-----------------+
-|     ### Header 3    | ### Header 3    |
-+---------------------+-----------------+
-|     #### Header 4   | #### Header 4   |
-+---------------------+-----------------+
-|     ##### Header 5  | ##### Header 5  |
-+---------------------+-----------------+
-|     ###### Header 6 | ###### Header 6 |
-+---------------------+-----------------+
-
++-----------------+-----------------+
+| Markdown Syntax | Output          |
++=================+=================+
+| ```             | # Header 1      |
+| # Header 1      |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ## Header 2     |
+| ## Header 2     |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ### Header 3    |
+| ### Header 3    |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | #### Header 4   |
+| #### Header 4   |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ##### Header 5  |
+| ##### Header 5  |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ###### Header 6 |
+| ###### Header 6 |                 |
+| ```             |                 |
++-----------------+-----------------+
 :::
 
-## Code
+## Embed code
+
+-   Huge range of possibilities
+-   As long as it starts with `{} and ends with`
+
+## Example of R code embedded
 
 ::: {style="font-size: 65%;"}
-
 ```{r}
 #| echo: fenced
 #| label: fig-airquality
@@ -357,36 +442,167 @@ ggplot(airquality, aes(Temp, Ozone)) +
   geom_point() + 
   geom_smooth(method = "loess")
 ```
-
 :::
+
+## Code Chunk Options in Quarto
+
+-   `echo`: Show code (`true`) or hide code (`false`)
+-   `eval`: Execute code (`true`) or skip execution (`false`)
+-   `include`: Include or exclude both code and output
+-   `warning` and `error` : Show or hide warnings/errors
+
+``` yaml
+#| echo: true
+#| eval: true
+#| warning: false
+#| error: false
+```
+
+# 💻 Your turn
+
+-   Download `Exercise 2.qmd` at `https://github.com/stijnbpeeters/Quarto-Workshop/Exercises/Exercise 2.qmd` to your R
+
+-   Complete the exercises and try rendering the document.
+
+<button id="start-timer" class="custom-button">
+
+Start 10:00 Timer
+
+</button>
+
+::: {style="font-size: 2em; margin-top: 20px;"}
+:::
+
+```{=html}
+<script>
+let countdownElement = document.getElementById('countdown');
+let button = document.getElementById('start-timer');
+let countdown;
+
+button.addEventListener('click', function() {
+  let time = 600; // 10 minutes in seconds
+  countdown = setInterval(function() {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    countdownElement.innerHTML = minutes + ':' + seconds;
+    time--;
+
+    if (time < 0) {
+      clearInterval(countdown);
+      countdownElement.innerHTML = "Time's up!";
+    }
+  }, 1000);
+});
+</script>
+```
+# 🤔 Questions?
+
+# Presentations {.background-slide-presentation}
+---
+![](Images/MP.gif)
+
+
+## Quarto presentation formats
+
+::: {.fragment .highlight-red}
+-   revealjs
+:::
+-   `beamer` for LaTex slides
+-   Powerpoint for when you **have** to collaborate via **office** 😒
+
+## revealjs
+
+`reveal.js` is an open source HTML presentation framework for creating interactive, beautiful web-based presentations for free. 😁
+
+-   Embed R code and show results inline
+-   Add animations and transitions
+-   Create responsive and interactive presentations
+
+## How difficult is revealjs?
+
+## How difficult is revealjs?
+
+``` yaml
+format: revealjs
+
+## Slide
+
+## Slide
+```
+
+![](Images/easy.gif)
+
+# 💻 Short Exercise
+Turn the recently revised document into a presentation rather than a report. Use the same title and the chapter names as slide titles.
+
+<button id="start-timer" class="custom-button">
+
+Start 3:00 Timer
+
+</button>
+
+::: {style="font-size: 2em; margin-top: 20px;"}
+:::
+
+```{=html}
+<script>
+let countdownElement = document.getElementById('countdown');
+let button = document.getElementById('start-timer');
+let countdown;
+
+button.addEventListener('click', function() {
+  let time = 180; // 3 minutes in seconds
+  countdown = setInterval(function() {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    countdownElement.innerHTML = minutes + ':' + seconds;
+    time--;
+
+    if (time < 0) {
+      clearInterval(countdown);
+      countdownElement.innerHTML = "Time's up!";
+    }
+  }, 1000);
+});
+</script>
+```
+## Some features of revealjs
+
+
+## Some extra's for presentations
+
+## Long exercise
+Do we have time for this?
+
+
+
+
+
 
 ## Topics worth exploring
 
-
 ::: {style="font-size: 85%;"}
-
 ### Before further embarking on the Quarto journey
 
-- HTML for web publishing: structuring content
-- CSS for styling: customising appearance beyond WYSIWYG capabilities
-- LaTeX for typesetting: producing high-quality `.pdf` documents
-- Pandoc for document conversion: converting between formats
-- RMarkdown for reproducible research: integrating R code and text
-- Jupyter for interactive computing: combining code, text, and output
-- Quarto for computational narratives: creating computational documents
-
+-   HTML for web publishing: structuring content
+-   CSS for styling: customising appearance beyond WYSIWYG capabilities
+-   LaTeX for typesetting: producing high-quality `.pdf` documents
+-   Pandoc for document conversion: converting between formats
+-   RMarkdown for reproducible research: integrating R code and text
+-   Jupyter for interactive computing: combining code, text, and output
+-   Quarto for computational narratives: creating computational documents
+-   Mermaid for diagrams: creating all sorts of diagrams
 :::
 
 ::: {style="text-align: center;"}
-
 # 🤔 Questions
-
 :::
 
 ## Ideas for the workshop
 
-- [Get started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
-- [R Quarto tutorial](https://www.appsilon.com/post/r-quarto-tutorial)
-- [Awesome Quarto](https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file#tutorials--workshops)
-- [RMarkdown.net](https://rmarkdown.net/quarto/)
-
+-   [Get started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
+-   [R Quarto tutorial](https://www.appsilon.com/post/r-quarto-tutorial)
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file#tutorials--workshops)
+-   [RMarkdown.net](https://rmarkdown.net/quarto/)
