@@ -49,21 +49,19 @@ editor_options:
 -   What are you hoping to achieve with Quarto?
 -   What are your expectations for today's session?
 
-
-::: {.fragment}
+::: fragment
 Goals of this session:
 
--  Understand the basics of Quarto
--  Learn how to create reproducible reports and presentations
--  Get familiar with the Quarto ecosystem
+-   Understand the basics of Quarto
+-   Learn how to create reproducible reports and presentations
+-   Get familiar with the Quarto ecosystem
 :::
-
 
 # 👓 What you see and what you want
 
 ## What you see is what you get (WYSIWYG)
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 <br>
 
@@ -73,7 +71,7 @@ Goals of this session:
 ::: {.column width="50%"}
 ![](https://live.staticflickr.com/2645/3953478168_25a5db04c5_c.jpg)
 :::
-:::::
+:::
 
 ## WYSIWYG: advantages and limitations
 
@@ -97,11 +95,9 @@ Goals of this session:
 
 ## WYSIWYM: what you see is what you mean
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
-
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/ViewsIceberg.svg/1920px-ViewsIceberg.svg.png)
-
 :::
 
 ::: {.column width="50%"}
@@ -127,26 +123,26 @@ Goals of this session:
 <br>
 
 ::: {style="font-size: 80%;"}
-+---------------------------------------+-----------------------------------------------+
-| Advantages                            | Limitations                                   |
-+=======================================+===============================================+
-| Emphasises content structure          |  Requires familiarity with markup             |
-+---------------------------------------+-----------------------------------------------+
-| Ensures semantic consistency          | No immediate visual feedback                  |
-+---------------------------------------+-----------------------------------------------+
-| Highly reproducible                   | Limited flexibility for visual customisation  |
-+---------------------------------------+-----------------------------------------------+
-| Supports version control              | Higher learning curve for new users           |
-+---------------------------------------+-----------------------------------------------+
-| Ideal for large, complex documents    | May require post-editing for final formatting |
-+---------------------------------------+-----------------------------------------------+
++------------------------------------+-----------------------------------------------+
+| Advantages                         | Limitations                                   |
++====================================+===============================================+
+| Emphasises content structure       | Requires familiarity with markup              |
++------------------------------------+-----------------------------------------------+
+| Ensures semantic consistency       | No immediate visual feedback                  |
++------------------------------------+-----------------------------------------------+
+| Highly reproducible                | Limited flexibility for visual customisation  |
++------------------------------------+-----------------------------------------------+
+| Supports version control           | Higher learning curve for new users           |
++------------------------------------+-----------------------------------------------+
+| Ideal for large, complex documents | May require post-editing for final formatting |
++------------------------------------+-----------------------------------------------+
 :::
 
 ## Pouring milk
 
 A straight-forward task - pour the boxed milk into the glass.
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 > Easy to use
 
@@ -155,13 +151,13 @@ A straight-forward task - pour the boxed milk into the glass.
 
 ::: {.column width="50%"}
 :::
-:::::
+:::
 
 ## Pouring milk
 
 A straight-forward task - pour the boxed milk into the glass.
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 > Easy to use
 
@@ -173,7 +169,7 @@ A straight-forward task - pour the boxed milk into the glass.
 
 ![](https://j.gifs.com/z6BO57.gif){width="750px"}
 :::
-:::::
+:::
 
 ## Early alternatives to WYSIWYG
 
@@ -262,17 +258,17 @@ OR
 
 Better not! Here are some reasons why you [should switch](https://www.schlosslab.org/quarto_code_club/quarto_intro.html):
 
-1. **Reduced dependencies**: Quarto includes many features out-of-the-box (e.g., TeX integration)
-2. **Quarto is likely to become the new standard**: Many new features likely only for Quarto
-3. **Switching is easy**: Quarto is compatible with RMarkdown
+1.  **Reduced dependencies**: Quarto includes many features out-of-the-box (e.g., TeX integration)
+2.  **Quarto is likely to become the new standard**: Many new features likely only for Quarto
+3.  **Switching is easy**: Quarto is compatible with RMarkdown
 
 ## Quarto: the official portal
 
-{{< fa display >}} [https://quarto.org](https://quarto.org)
+{{< fa display >}} <https://quarto.org>
+
 ```{=html}
 <iframe width="100%" height="75%" src="https://quarto.org" title="quarto.org"></iframe>
 ```
-
 ## Quarto in RStudio
 
 ![](https://quarto.org/docs/tools/images/rstudio-preview.png){fig-align="center"}
@@ -285,21 +281,18 @@ Better not! Here are some reasons why you [should switch](https://www.schlosslab
 
 <br>
 
-:::{columns}
-:::{.column width="50%"}
-
-
+::: columns
+::: {.column width="50%"}
 ![](https://media1.tenor.com/m/VPwzFiDL2a4AAAAC/jack-nicholson-nonono.gif)
 :::
 
-:::{.column width="50%"}
--  ✂️ Copy-pasting
--   🤷️ Manualyl piecing together analyses
+::: {.column width="50%"}
+-   ✂️ Copy-pasting
+-   🤷️ Manually piecing together analyses
 -   🔄 Nightmares when the data is updated and analyses need to re-run
 -   📊 Static reports that are out of date the moment they are created
 -   📚 Maintaining separate code and documentation
 -   📈 Manually updating figures & tables in a report
-
 :::
 :::
 
@@ -327,7 +320,7 @@ Better not! Here are some reasons why you [should switch](https://www.schlosslab
 
 ## Change the way you work
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 ````         
 ---
@@ -364,7 +357,7 @@ ggplot(airquality, aes(Temp, Ozone)) +
 ::: {.column width="50%"}
 ![](https://quarto.org/images/hello-knitr.png)
 :::
-:::::
+:::
 
 ## Our workhorse: HTML 🏇 {.column-screen}
 
@@ -374,16 +367,16 @@ ggplot(airquality, aes(Temp, Ozone)) +
 
 ## Anatomy of a Quarto doc - YAML
 
-[YAML](https://yaml.org/)  = Yet Another Markup Language:
+[YAML](https://yaml.org/) = Yet Another Markup Language:
 
-- **Purpose**: Configures document metadata and settings.
-- **Location**: Placed at the very top of the document.
-- **Structure**: Uses key-value pairs in a plain text format.
-- **Common Keys**: `title`, `author`, `date`, `output`
+-   **Purpose**: Configures document metadata and settings.
+-   **Location**: Placed at the very top of the document.
+-   **Structure**: Uses key-value pairs in a plain text format.
+-   **Common Keys**: `title`, `author`, `date`, `output`
 
 ## Anatomy of a Quarto doc - YAML {.smaller}
 
-::::: columns
+::: columns
 ::: {.column width="40%"}
 Fairly simple
 
@@ -423,14 +416,14 @@ format:
         prefer-html: true
 ```
 :::
-:::::
+:::
 
 ## 💻 Your turn (1)
 
 <br>
 
-:::::: {style="font-size: 70%;"}
-::::: columns
+::: {style="font-size: 70%;"}
+::: columns
 ::: {.column width="50%"}
 1.  Create an *empty* .qmd file
 2.  Add a YAML header with the following:
@@ -458,8 +451,8 @@ author:
       email: quiteaname@test.com
 ```
 :::
-:::::
-::::::
+:::
+:::
 
 <button id="start-timer" class="custom-button">
 
@@ -470,6 +463,7 @@ Start 3:00 Timer
 ::: {#countdown style="font-size: 2em; margin-top: 20px;"}
 :::
 
+```{=html}
 <script>
 let countdownElement = document.getElementById('countdown');
 let button = document.getElementById('start-timer');
@@ -491,7 +485,7 @@ button.addEventListener('click', function() {
   }, 1000);
 });
 </script>
-
+```
 ## Text Formatting
 
 +-------------------------------+-------------------------------+
@@ -548,9 +542,7 @@ button.addEventListener('click', function() {
 
 ## Embed code
 
-Huge range of possibilities
--   As long as it starts with ```` ```{} ```` and ends with ```` ``` ````
--   Between the braces, specify the code language (e.g., ```` ```{r} ```` for R code)
+Huge range of possibilities - As long as it starts with ```` ```{} ```` and ends with ```` ``` ```` - Between the braces, specify the code language (e.g., ```` ```{r} ```` for R code)
 
 ## Example of R code embedded
 
@@ -599,6 +591,7 @@ Start 10:00 Timer
 ::: {style="font-size: 2em; margin-top: 20px;"}
 :::
 
+```{=html}
 <script>
 let countdownElement = document.getElementById('countdown');
 let button = document.getElementById('start-timer');
@@ -620,10 +613,10 @@ button.addEventListener('click', function() {
   }, 1000);
 });
 </script>
-
+```
 # 🤔 Questions?
 
-## \# Presentations {.background-slide-presentation}
+## Presentations
 
 ![](Images/MP.gif)
 
@@ -671,6 +664,7 @@ Start 4:00 Timer
 ::: {style="font-size: 2em; margin-top: 20px;"}
 :::
 
+```{=html}
 <script>
 let countdownElement = document.getElementById('countdown');
 let button = document.getElementById('start-timer');
@@ -692,25 +686,156 @@ button.addEventListener('click', function() {
   }, 1000);
 });
 </script>
+```
+# Some features of revealjs
 
-## Some features of revealjs
+## Separate slides
 
-## Some extra's for presentations
+-   Level 1 header `#` = new slide and section
+-   Level 2 header `##` = new slide
+-   `---` for a blank slide
 
-## Long exercise
+## Incrementally reveal elements (1)
 
-Do we have time for this?
+::: {style="font-size: 70%;"}
+::: columns
+::: {.column width="50%"}
+-   Create elements with `*`, `-`, or `1.`
 
-## Topics worth exploring
+**Reveal elements for a specific slide**
 
+``` html
+::: {.incremental}
+- First item
+- Second item
+:::
+```
 
-## Quarto advanced and further readings
+**Turn it off**
 
-- [Quarto: The Definitive Guide](https://quarto-tdg.org/)
-- [Introduction to Quarto presentation](https://lennartwittkuhn.com/quarto-workshop/#/title-slide)
-- [Literate programming in R](https://elixir-europe-training.github.io/ELIXIR-TrP-LiterateProgrammingR-CodeRep/)
-- Add [fontawesome](https://fontawesome.com/) icons to your Quarto with a [lua filter](https://github.com/quarto-ext/fontawesome?tab=readme-ov-file)
+``` html
+::: {.nonincremental}
+- First item
+- Second item
+:::
+```
+:::
 
+::: {.column width="50%"}
+<br> <br> **Or for all the slides**
+
+``` yaml
+format: 
+  revealjs:
+    incremental: true
+```
+:::
+:::
+:::
+
+## Incrementally reveal elements (2)
+
+::: incremental
+-   First item
+-   Second item
+-   Last item
+-   **BUT** not limited to bullet points
+-   Use `. . .` syntax to indicate a break at an arbitrary location
+:::
+
+. . .
+
+```{r}
+head(mtcars)
+```
+
+## Fragments
+
+You can also use fragments
+
+<br>
+
+::: fragment
+Fade in
+:::
+
+::: {.fragment .fade-out}
+Fade out
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: {.fragment .fade-in-then-out}
+Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+## Column layout
+
+``` html
+
+:::: {.columns}
+
+::: {.column width="40%"}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+```
+
+## Column layout
+
+::: columns
+::: {.column width="40%"}
+Left
+:::
+
+::: {.column width="60%"}
+Right
+:::
+:::
+
+## Pictures
+
+::: columns
+::: {.column width="50%"}
+``` html
+![](https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2){fig-align="center"}
+```
+
+<br>
+
+![](https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+``` html
+![](https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg)
+```
+
+<br>
+
+![](https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg)
+:::
+:::
+
+## And many more features
+
+```{=html}
+<iframe width="100%" height="75%" src="https://quarto.org/docs/presentations/revealjs/" title="https://quarto.org/docs/presentations/revealjs/"></iframe>
+```
+# 💻Last exercise
+
+1.  Rebuild your own PowerPoint presentation into a revealjs Quarto presentation
+
+## But first
 ::: {style="font-size: 85%;"}
 ### Before further embarking on the Quarto journey
 
@@ -724,13 +849,14 @@ Do we have time for this?
 -   Mermaid for diagrams: creating all sorts of diagrams
 :::
 
+## Quarto advanced and further readings
+
+-   [Quarto: The Definitive Guide](https://quarto-tdg.org/)
+-   [Introduction to Quarto presentation](https://lennartwittkuhn.com/quarto-workshop/#/title-slide)
+-   [Literate programming in R](https://elixir-europe-training.github.io/ELIXIR-TrP-LiterateProgrammingR-CodeRep/)
+-   Add [fontawesome](https://fontawesome.com/) icons to your Quarto with a [lua filter](https://github.com/quarto-ext/fontawesome?tab=readme-ov-file)
+
+
 ::: {style="text-align: center;"}
 # 🤔 Questions
 :::
-
-## Ideas for the workshop
-
--   [Get started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
--   [R Quarto tutorial](https://www.appsilon.com/post/r-quarto-tutorial)
--   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto?tab=readme-ov-file#tutorials--workshops)
--   [RMarkdown.net](https://rmarkdown.net/quarto/)
