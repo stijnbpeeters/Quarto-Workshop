@@ -9,15 +9,13 @@ format:
     reference-location: document
     css: styles.css
     logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.digitalmarketingrbs.nl%2Fwp-content%2Fuploads%2F2020%2F10%2FLogo_Erasmus_Universiteit_Rotterdam.svg.png&f=1&nofb=1&ipt=00db2adccfd8c4b13333b0d509fd41c35bd76fea173e79d0644cb6e308a470d0&ipo=images"
+    chalkboard: true
+    from: "markdown+emoji"
 editor_options: 
   chunk_output_type: console
 ---
 
 ## ☀️ Our session today
-
-------------------------------------------------------------------------
-
-**Deze aanpassen**
 
 ::: {style="font-size: 55%;"}
 +---------------+-------------------------------------+------------------------------------+
@@ -37,7 +35,7 @@ editor_options:
 : Today's session {tbl-colwidths="\[20,35,45\]"}
 :::
 
-## 🔥 Warming-up with an 🧊 icebreaker
+## :fire: Warming-up with an 🧊 icebreaker
 
 <iframe id="example1" src="https://5hoc60-frederick0thielen.shinyapps.io/icebreaker/" style="border: none; width: 100%; height: 520px" frameborder="0">
 
@@ -542,7 +540,11 @@ button.addEventListener('click', function() {
 
 ## Embed code
 
-Huge range of possibilities - As long as it starts with ```` ```{} ```` and ends with ```` ``` ```` - Between the braces, specify the code language (e.g., ```` ```{r} ```` for R code)
+Huge range of possibilities:
+
+- As long as it starts with ```` ```{} ```` and ends with ```` ``` ````
+
+- Between the braces, specify the code language (e.g., ```` ```{r} ```` for R code)
 
 ## Example of R code embedded
 
@@ -831,13 +833,16 @@ Right
 ```{=html}
 <iframe width="100%" height="75%" src="https://quarto.org/docs/presentations/revealjs/" title="https://quarto.org/docs/presentations/revealjs/"></iframe>
 ```
+
 # 💻Last exercise
 
 1.  Rebuild your own PowerPoint presentation into a revealjs Quarto presentation
 
 ## But first
+
 ::: {style="font-size: 85%;"}
-### Before further embarking on the Quarto journey
+
+**Before further embarking on the Quarto journey**
 
 -   HTML for web publishing: structuring content
 -   CSS for styling: customising appearance beyond WYSIWYG capabilities
@@ -847,6 +852,7 @@ Right
 -   Jupyter for interactive computing: combining code, text, and output
 -   Quarto for computational narratives: creating computational documents
 -   Mermaid for diagrams: creating all sorts of diagrams
+
 :::
 
 ## Quarto advanced and further readings

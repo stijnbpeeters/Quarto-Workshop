@@ -10,7 +10,7 @@
 <link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="presentation_files/libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="presentation_files/libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Stijn Peeters &amp; Frederick Thielen">
   <meta name="dcterms.date" content="2024-11-07">
@@ -34,7 +34,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -45,7 +45,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -73,7 +73,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -87,7 +87,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -103,6 +103,8 @@
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -225,7 +227,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -409,12 +412,8 @@ Stijn Peeters &amp; Frederick Thielen
 </section>
 <section id="our-session-today" class="slide level2">
 <h2>☀️ Our session today</h2>
-</section>
-<section class="slide level2">
-
-<p><strong>Deze aanpassen</strong></p>
 <div style="font-size: 55%;">
-<table>
+<table class="caption-top">
 <caption>Today’s session</caption>
 <colgroup>
 <col style="width: 20%">
@@ -459,7 +458,7 @@ Stijn Peeters &amp; Frederick Thielen
 </div>
 </section>
 <section id="warming-up-with-an-icebreaker" class="slide level2">
-<h2>🔥 Warming-up with an 🧊 icebreaker</h2>
+<h2><span class="emoji" data-emoji="fire">🔥</span> Warming-up with an 🧊 icebreaker</h2>
 <iframe id="example1" src="https://5hoc60-frederick0thielen.shinyapps.io/icebreaker/" style="border: none; width: 100%; height: 520px" frameborder="0">
 </iframe>
 </section>
@@ -494,14 +493,13 @@ Stijn Peeters &amp; Frederick Thielen
 </blockquote>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://live.staticflickr.com/2645/3953478168_25a5db04c5_c.jpg"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="wysiwyg-advantages-and-limitations" class="slide level2">
 <h2>WYSIWYG: advantages and limitations</h2>
 <p><br></p>
 <div style="font-size: 80%;">
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 47%">
 <col style="width: 52%">
@@ -547,8 +545,7 @@ Stijn Peeters &amp; Frederick Thielen
 <blockquote>
 <p>Software that enables content to be <em>edited</em> in a way that focuses on <em>semantic structure</em>, rather than its final appearance.</p>
 </blockquote>
-</div>
-</div>
+</div></div>
 </section>
 <section id="what-are-semantics-in-this-context" class="slide level2">
 <h2>What are semantics in this context?</h2>
@@ -566,7 +563,7 @@ Stijn Peeters &amp; Frederick Thielen
 <h2>WYSIWYM: advantages and limitations</h2>
 <p><br></p>
 <div style="font-size: 80%;">
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 43%">
 <col style="width: 56%">
@@ -613,8 +610,7 @@ Stijn Peeters &amp; Frederick Thielen
 <p><img data-src="https://j.gifs.com/WPwJ1W.gif" width="750"></p>
 </div><div class="column" style="width:50%;">
 
-</div>
-</div>
+</div></div>
 </section>
 <section id="pouring-milk-1" class="slide level2">
 <h2>Pouring milk</h2>
@@ -630,14 +626,13 @@ Stijn Peeters &amp; Frederick Thielen
 <p>Understanding the details</p>
 </blockquote>
 <p><img data-src="https://j.gifs.com/z6BO57.gif" width="750"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="early-alternatives-to-wysiwyg" class="slide level2">
 <h2>Early alternatives to WYSIWYG</h2>
 <p>1970s: <strong>TeX</strong> typesetting systems (Donald Knuth)</p>
 
-<img data-src="https://live.staticflickr.com/7384/13644214153_d97e61b52d_b.jpg" class="r-stretch quarto-figure-center"></section>
+<img data-src="https://live.staticflickr.com/7384/13644214153_d97e61b52d_b.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 
 <section id="developments-1" class="slide level2">
 <h2>Developments</h2>
@@ -646,7 +641,7 @@ Stijn Peeters &amp; Frederick Thielen
 <li>Standard markup language for documents designed to be displayed in a web browser</li>
 </ul>
 
-<img data-src="https://live.staticflickr.com/3194/3032843606_53d11bda96_w.jpg" class="r-stretch quarto-figure-center"></section>
+<img data-src="https://live.staticflickr.com/3194/3032843606_53d11bda96_w.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="markdown" class="slide level2">
 <h2>Markdown</h2>
 <p>2004: <strong>Markdown</strong> (John Gruber); <em>lightweight markup language</em> with plain-text-formatting syntax</p>
@@ -732,7 +727,7 @@ Stijn Peeters &amp; Frederick Thielen
 <section id="quarto-in-rstudio" class="slide level2">
 <h2>Quarto in RStudio</h2>
 
-<img data-src="https://quarto.org/docs/tools/images/rstudio-preview.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="https://quarto.org/docs/tools/images/rstudio-preview.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 
 <section id="benefits-of-quarto-and-rmarkdown" class="slide level2 smaller">
 <h2>Benefits of Quarto (and RMarkdown)</h2>
@@ -749,8 +744,7 @@ Stijn Peeters &amp; Frederick Thielen
 <li>📚 Maintaining separate code and documentation</li>
 <li>📈 Manually updating figures &amp; tables in a report</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="possibilities-with-quarto" class="slide level2">
 <h2>Possibilities with Quarto</h2>
@@ -782,38 +776,37 @@ Stijn Peeters &amp; Frederick Thielen
 <h2>Change the way you work</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "ggplot2 demo"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Norah Jones"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "5/22/2021"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-width: 8</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-height: 4</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Air Quality</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>@fig-airquality further explores the impact of temperature </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  on ozone level.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-airquality</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Temperature and ozone level.</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href=""></a><span class="co">---</span></span>
+<span id="cb1-2"><a href=""></a><span class="an">title:</span><span class="co"> "ggplot2 demo"</span></span>
+<span id="cb1-3"><a href=""></a><span class="an">author:</span><span class="co"> "Norah Jones"</span></span>
+<span id="cb1-4"><a href=""></a><span class="an">date:</span><span class="co"> "5/22/2021"</span></span>
+<span id="cb1-5"><a href=""></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb1-6"><a href=""></a><span class="co">  html:</span></span>
+<span id="cb1-7"><a href=""></a><span class="co">    fig-width: 8</span></span>
+<span id="cb1-8"><a href=""></a><span class="co">    fig-height: 4</span></span>
+<span id="cb1-9"><a href=""></a><span class="co">    code-fold: true</span></span>
+<span id="cb1-10"><a href=""></a><span class="co">---</span></span>
+<span id="cb1-11"><a href=""></a></span>
+<span id="cb1-12"><a href=""></a><span class="fu">## Air Quality</span></span>
+<span id="cb1-13"><a href=""></a></span>
+<span id="cb1-14"><a href=""></a>@fig-airquality further explores the impact of temperature </span>
+<span id="cb1-15"><a href=""></a>  on ozone level.</span>
+<span id="cb1-16"><a href=""></a></span>
+<span id="cb1-17"><a href=""></a><span class="in">```{r}</span></span>
+<span id="cb1-18"><a href=""></a><span class="in">#| label: fig-airquality</span></span>
+<span id="cb1-19"><a href=""></a><span class="in">#| fig-cap: Temperature and ozone level.</span></span>
+<span id="cb1-20"><a href=""></a><span class="in">#| warning: false</span></span>
+<span id="cb1-21"><a href=""></a></span>
+<span id="cb1-22"><a href=""></a><span class="in">library(ggplot2)</span></span>
+<span id="cb1-23"><a href=""></a><span class="in">ggplot(airquality, aes(Temp, Ozone)) + </span></span>
+<span id="cb1-24"><a href=""></a></span>
+<span id="cb1-25"><a href=""></a><span class="in">  geom_point() + </span></span>
+<span id="cb1-26"><a href=""></a><span class="in">  geom_smooth(method = "loess"</span></span>
+<span id="cb1-27"><a href=""></a><span class="in">)</span></span>
+<span id="cb1-28"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://quarto.org/images/hello-knitr.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="our-workhorse-html" class="slide level2 column-screen">
 <h2>Our workhorse: HTML 🏇</h2>
@@ -835,36 +828,35 @@ Stijn Peeters &amp; Frederick Thielen
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>Fairly simple</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="pp">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href=""></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb2-3"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb2-4"><a href=""></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:60%;">
 <p>Or more complex</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> This is the title</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> Quite a subtitle</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Quite a name</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="at">      </span><span class="fu">email</span><span class="kw">:</span><span class="at"> quiteaname@test.com</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> biblio.bib</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a></span>
-<span id="cb3-12"><a href="#cb3-12"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a><span class="at">            </span><span class="fu">light</span><span class="kw">:</span></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="at">                </span><span class="kw">-</span><span class="at"> cosmo</span></span>
-<span id="cb3-17"><a href="#cb3-17"></a><span class="at">                </span><span class="kw">-</span><span class="at"> scss/custom.scss</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a><span class="at">            </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span>
-<span id="cb3-19"><a href="#cb3-19"></a><span class="at">        </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-20"><a href="#cb3-20"></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span></span>
-<span id="cb3-21"><a href="#cb3-21"></a><span class="at">        </span><span class="fu">prefer-html</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> This is the title</span></span>
+<span id="cb3-2"><a href=""></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> Quite a subtitle</span></span>
+<span id="cb3-3"><a href=""></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb3-4"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb3-5"><a href=""></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Quite a name</span></span>
+<span id="cb3-6"><a href=""></a><span class="at">      </span><span class="fu">email</span><span class="kw">:</span><span class="at"> quiteaname@test.com</span></span>
+<span id="cb3-7"><a href=""></a></span>
+<span id="cb3-8"><a href=""></a><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-9"><a href=""></a><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb3-10"><a href=""></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> biblio.bib</span></span>
+<span id="cb3-11"><a href=""></a></span>
+<span id="cb3-12"><a href=""></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-13"><a href=""></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb3-14"><a href=""></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span></span>
+<span id="cb3-15"><a href=""></a><span class="at">            </span><span class="fu">light</span><span class="kw">:</span></span>
+<span id="cb3-16"><a href=""></a><span class="at">                </span><span class="kw">-</span><span class="at"> cosmo</span></span>
+<span id="cb3-17"><a href=""></a><span class="at">                </span><span class="kw">-</span><span class="at"> scss/custom.scss</span></span>
+<span id="cb3-18"><a href=""></a><span class="at">            </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span>
+<span id="cb3-19"><a href=""></a><span class="at">        </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-20"><a href=""></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span></span>
+<span id="cb3-21"><a href=""></a><span class="at">        </span><span class="fu">prefer-html</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </section>
 <section id="your-turn-1" class="slide level2">
 <h2>💻 Your turn (1)</h2>
@@ -876,11 +868,11 @@ Stijn Peeters &amp; Frederick Thielen
 <li>Create an <em>empty</em> .qmd file</li>
 <li>Add a YAML header with the following:</li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="pp">---</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href=""></a><span class="pp">---</span></span>
+<span id="cb4-2"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb4-3"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-4"><a href=""></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb4-5"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="3" type="1">
 <li>Render the document</li>
 </ol>
@@ -888,14 +880,13 @@ Stijn Peeters &amp; Frederick Thielen
 <ol start="4" type="1">
 <li>(Optionally) add some more YAML arguments like:</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> This is the title</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> Quite a subtitle</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Quite a name</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="at">      </span><span class="fu">email</span><span class="kw">:</span><span class="at"> quiteaname@test.com</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> This is the title</span></span>
+<span id="cb5-2"><a href=""></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> Quite a subtitle</span></span>
+<span id="cb5-3"><a href=""></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb5-4"><a href=""></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-5"><a href=""></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Quite a name</span></span>
+<span id="cb5-6"><a href=""></a><span class="at">      </span><span class="fu">email</span><span class="kw">:</span><span class="at"> quiteaname@test.com</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </div>
 <button id="start-timer" class="custom-button">
 <p>Start 3:00 Timer</p>
@@ -927,7 +918,7 @@ button.addEventListener('click', function() {
 </section>
 <section id="text-formatting" class="slide level2">
 <h2>Text Formatting</h2>
-<table style="width:89%;">
+<table class="caption-top" style="width:89%;">
 <colgroup>
 <col style="width: 44%">
 <col style="width: 44%">
@@ -961,7 +952,7 @@ button.addEventListener('click', function() {
 <section id="headings" class="slide level2">
 <h2>Headings</h2>
 <div style="font-size: 80%;">
-<table style="width:50%;">
+<table class="caption-top" style="width:50%;">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -1003,29 +994,37 @@ button.addEventListener('click', function() {
 </section>
 <section id="embed-code" class="slide level2">
 <h2>Embed code</h2>
-<p>Huge range of possibilities - As long as it starts with <code>```{}</code> and ends with <code>```</code> - Between the braces, specify the code language (e.g., <code>```{r}</code> for R code)</p>
+<p>Huge range of possibilities:</p>
+<ul>
+<li><p>As long as it starts with <code>```{}</code> and ends with <code>```</code></p></li>
+<li><p>Between the braces, specify the code language (e.g., <code>```{r}</code> for R code)</p></li>
+</ul>
 </section>
 <section id="example-of-r-code-embedded" class="slide level2">
 <h2>Example of R code embedded</h2>
 <div style="font-size: 65%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="co">#| label: fig-airquality</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="co">#| fig-cap: Temperature and ozone level</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="co">#| fig-width: 10</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="co">#| fig-height: 3</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a></span>
-<span id="cb16-7"><a href="#cb16-7"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb16-8"><a href="#cb16-8"></a></span>
-<span id="cb16-9"><a href="#cb16-9"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb16-10"><a href="#cb16-10"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb16-11"><a href="#cb16-11"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span>
-<span id="cb16-12"><a href="#cb16-12"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href=""></a><span class="in">```{r}</span></span>
+<span id="cb16-2"><a href=""></a><span class="in">#| label: fig-airquality</span></span>
+<span id="cb16-3"><a href=""></a><span class="in">#| fig-cap: Temperature and ozone level</span></span>
+<span id="cb16-4"><a href=""></a><span class="in">#| fig-width: 10</span></span>
+<span id="cb16-5"><a href=""></a><span class="in">#| fig-height: 3</span></span>
+<span id="cb16-6"><a href=""></a></span>
+<span id="cb16-7"><a href=""></a><span class="in">library(ggplot2)</span></span>
+<span id="cb16-8"><a href=""></a></span>
+<span id="cb16-9"><a href=""></a><span class="in">ggplot(airquality, aes(Temp, Ozone)) + </span></span>
+<span id="cb16-10"><a href=""></a><span class="in">  geom_point() + </span></span>
+<span id="cb16-11"><a href=""></a><span class="in">  geom_smooth(method = "loess")</span></span>
+<span id="cb16-12"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-airquality" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="presentation_files/figure-revealjs/fig-airquality-1.png" width="960"></p>
-<figcaption>Figure&nbsp;1: Temperature and ozone level</figcaption>
+<div id="fig-airquality" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-airquality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="presentation_files/figure-revealjs/fig-airquality-1.png" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-airquality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Temperature and ozone level
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1040,10 +1039,10 @@ button.addEventListener('click', function() {
 <li><code>include</code>: Include or exclude both code and output</li>
 <li><code>warning</code> and <code>error</code> : Show or hide warnings/errors</li>
 </ul>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="co">#| eval: true</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="co">#| warning: false</span></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co">#| error: false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href=""></a><span class="co">#| echo: true</span></span>
+<span id="cb17-2"><a href=""></a><span class="co">#| eval: true</span></span>
+<span id="cb17-3"><a href=""></a><span class="co">#| warning: false</span></span>
+<span id="cb17-4"><a href=""></a><span class="co">#| error: false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="your-turn-2" class="slide level2">
 <h2>💻 Your turn (2)</h2>
@@ -1114,11 +1113,11 @@ button.addEventListener('click', function() {
 </section>
 <section id="how-difficult-is-revealjs-1" class="slide level2">
 <h2>How difficult is revealjs?</h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> revealjs</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a></span>
-<span id="cb18-3"><a href="#cb18-3"></a><span class="co">## Slide</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a></span>
-<span id="cb18-5"><a href="#cb18-5"></a><span class="co">## Slide</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> revealjs</span></span>
+<span id="cb18-2"><a href=""></a></span>
+<span id="cb18-3"><a href=""></a><span class="co">## Slide</span></span>
+<span id="cb18-4"><a href=""></a></span>
+<span id="cb18-5"><a href=""></a><span class="co">## Slide</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <img data-src="Images/easy.gif" class="r-stretch"></section>
 <section id="short-exercise-3" class="slide level2">
@@ -1176,22 +1175,21 @@ button.addEventListener('click', function() {
 <li>Create elements with <code>*</code>, <code>-</code>, or <code>1.</code></li>
 </ul>
 <p><strong>Reveal elements for a specific slide</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1"></a>::: {.incremental}</span>
-<span id="cb19-2"><a href="#cb19-2"></a>- First item</span>
-<span id="cb19-3"><a href="#cb19-3"></a>- Second item</span>
-<span id="cb19-4"><a href="#cb19-4"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb19-1"><a href=""></a>::: {.incremental}</span>
+<span id="cb19-2"><a href=""></a>- First item</span>
+<span id="cb19-3"><a href=""></a>- Second item</span>
+<span id="cb19-4"><a href=""></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Turn it off</strong></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1"></a>::: {.nonincremental}</span>
-<span id="cb20-2"><a href="#cb20-2"></a>- First item</span>
-<span id="cb20-3"><a href="#cb20-3"></a>- Second item</span>
-<span id="cb20-4"><a href="#cb20-4"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb20-1"><a href=""></a>::: {.nonincremental}</span>
+<span id="cb20-2"><a href=""></a>- First item</span>
+<span id="cb20-3"><a href=""></a>- Second item</span>
+<span id="cb20-4"><a href=""></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><br> <br> <strong>Or for all the slides</strong></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a><span class="at">    </span><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb21-1"><a href=""></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb21-2"><a href=""></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb21-3"><a href=""></a><span class="at">    </span><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </div>
 </section>
 <section id="incrementally-reveal-elements-2" class="slide level2">
@@ -1241,16 +1239,16 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </section>
 <section id="column-layout" class="slide level2">
 <h2>Column layout</h2>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1"></a></span>
-<span id="cb23-2"><a href="#cb23-2"></a>:::: {.columns}</span>
-<span id="cb23-3"><a href="#cb23-3"></a></span>
-<span id="cb23-4"><a href="#cb23-4"></a>::: {.column width="40%"}</span>
-<span id="cb23-5"><a href="#cb23-5"></a>contents...</span>
-<span id="cb23-6"><a href="#cb23-6"></a>:::</span>
-<span id="cb23-7"><a href="#cb23-7"></a></span>
-<span id="cb23-8"><a href="#cb23-8"></a>::: {.column width="60%"}</span>
-<span id="cb23-9"><a href="#cb23-9"></a>contents...</span>
-<span id="cb23-10"><a href="#cb23-10"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb23-1"><a href=""></a></span>
+<span id="cb23-2"><a href=""></a>:::: {.columns}</span>
+<span id="cb23-3"><a href=""></a></span>
+<span id="cb23-4"><a href=""></a>::: {.column width="40%"}</span>
+<span id="cb23-5"><a href=""></a>contents...</span>
+<span id="cb23-6"><a href=""></a>:::</span>
+<span id="cb23-7"><a href=""></a></span>
+<span id="cb23-8"><a href=""></a>::: {.column width="60%"}</span>
+<span id="cb23-9"><a href=""></a>contents...</span>
+<span id="cb23-10"><a href=""></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="column-layout-1" class="slide level2">
 <h2>Column layout</h2>
@@ -1259,22 +1257,24 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <p>Left</p>
 </div><div class="column" style="width:60%;">
 <p>Right</p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="pictures" class="slide level2">
 <h2>Pictures</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1"></a>![](https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress<span class="er">&amp;</span>cs=tinysrgb<span class="er">&amp;</span>w=1260<span class="er">&amp;</span>h=750<span class="er">&amp;</span>dpr=2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb24-1"><a href=""></a>![](https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress<span class="er">&amp;</span>cs=tinysrgb<span class="er">&amp;</span>w=1260<span class="er">&amp;</span>h=750<span class="er">&amp;</span>dpr=2){fig-align="center"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<p><img data-src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </div><div class="column" style="width:50%;">
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb25-1"><a href="#cb25-1"></a>![](https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb25-1"><a href=""></a>![](https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <p><img data-src="https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="and-many-more-features" class="slide level2">
 <h2>And many more features</h2>
@@ -1289,8 +1289,8 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </section>
 <section id="but-first" class="slide level2">
 <h2>But first</h2>
-<section id="before-further-embarking-on-the-quarto-journey" style="font-size: 85%;">
-<h3>Before further embarking on the Quarto journey</h3>
+<div style="font-size: 85%;">
+<p><strong>Before further embarking on the Quarto journey</strong></p>
 <ul>
 <li>HTML for web publishing: structuring content</li>
 <li>CSS for styling: customising appearance beyond WYSIWYG capabilities</li>
@@ -1301,7 +1301,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <li>Quarto for computational narratives: creating computational documents</li>
 <li>Mermaid for diagrams: creating all sorts of diagrams</li>
 </ul>
-</section>
+</div>
 </section>
 <section id="quarto-advanced-and-further-readings" class="slide level2">
 <h2>Quarto advanced and further readings</h2>
@@ -1317,9 +1317,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 
 </section>
 
+<div class="quarto-auto-generated-content">
 <p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.digitalmarketingrbs.nl%2Fwp-content%2Fuploads%2F2020%2F10%2FLogo_Erasmus_Universiteit_Rotterdam.svg.png&amp;f=1&amp;nofb=1&amp;ipt=00db2adccfd8c4b13333b0d509fd41c35bd76fea173e79d0644cb6e308a470d0&amp;ipo=images" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>ESHPM day 2024</p>
+</div>
 </div>
     </div>
   </div>
@@ -1331,6 +1333,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
   <script src="presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1347,12 +1350,12 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1523,7 +1526,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1602,18 +1605,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1645,11 +1637,50 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1659,8 +1690,17 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1674,7 +1714,11 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
