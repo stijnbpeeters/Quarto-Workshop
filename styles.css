@@ -23,3 +23,38 @@ section.background-slide-presentation {
   cursor: pointer;
   border-radius: 40px;
 }
+
+.subtitle-container {
+  display: flex;
+  justify-content: space-between;      /* Aligns left and right parts at opposite ends */
+  align-items: flex-start;             /* Aligns items at the top */
+  width: 100%;
+  margin-top: -10px;                   /* Move the subtitle container higher */
+  padding-top: 5px;                    /* Optional padding to adjust spacing */
+  font-size: 1em;
+  color: #black;
+  font-weight: 300;
+  text-align: center;                  /* Centers text and images within each column */
+}
+
+/* Styling for left and right parts */
+.left-part, .right-part {
+  display: flex;
+  flex-direction: column;              /* Stacks image above the text */
+  align-items: center;                 /* Centers content within each part */
+  margin-top: -100px;                   /* Adjust this to move content up */
+}
+
+
+.right-part {
+  text-align: right;
+  margin-left: 10px; /* Adjust space between text if needed */
+}
+
+.subtitle-image {
+  width: auto;  /* Adjust image size as needed */
+  height: 200px;
+  margin-bottom: 0px;
+  border-radius: 50%
+  /* Adds space between image and text */
+}

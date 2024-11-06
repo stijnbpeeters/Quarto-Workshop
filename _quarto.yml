@@ -1,0 +1,14 @@
+project:
+  type: default
+
+format:
+  revealjs:
+    reference-location: "document"
+    css: "styles.css"
+    slide-number: "c/t"
+    transition-speed: "fast"
+    chalkboard: true
+    metadata-files: 
+      - _variables.yml
+    from: "markdown+emoji"
+    logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.digitalmarketingrbs.nl%2Fwp-content%2Fuploads%2F2020%2F10%2FLogo_Erasmus_Universiteit_Rotterdam.svg.png&f=1&nofb=1&ipt=00db2adccfd8c4b13333b0d509fd41c35bd76fea173e79d0644cb6e308a470d0&ipo=images"

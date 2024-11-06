@@ -1,36 +1,40 @@
 ---
-title: "👋 Welcome to the Quarto workshop"
-subtitle: "Create reproducible reports and presentations with Quarto"
-author: "Stijn Peeters & Frederick Thielen"
+title: "{{< var title >}}"
+subtitle: |
+  {{< var subtitle >}}
+  <br>
+  <br>
+  [{{< fa display >}} Slides]({{< var slides >}}) <div class = 'subtitle-container'><span class = 'left-part'><img src='Images/Stijn.jpg' alt='Stijn Image' class='subtitle-image'>
+  Stijn Peeters [{{< fa link >}}]({{< var linkedinstijn >}}) </span><span class = 'right-part'><img src='Images/Frederick.jpeg' alt='Frederick Image' class='subtitle-image'>
+  Frederick Thielen [{{< fa link >}}]({{< var linkedinfred >}})</span></div>
 footer: "ESHPM day 2024"
-date: "07 November 2024"
-format: 
+format:
   revealjs:
-    reference-location: document
-    css: styles.css
-    logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.digitalmarketingrbs.nl%2Fwp-content%2Fuploads%2F2020%2F10%2FLogo_Erasmus_Universiteit_Rotterdam.svg.png&f=1&nofb=1&ipt=00db2adccfd8c4b13333b0d509fd41c35bd76fea173e79d0644cb6e308a470d0&ipo=images"
-    chalkboard: true
-    from: "markdown+emoji"
-editor_options: 
-  chunk_output_type: console
+    reference-location: "document"
 ---
 
 ## ☀️ Our session today
 
 ::: {style="font-size: 55%;"}
-+---------------+-------------------------------------+------------------------------------+
-| Time          | Title                               | Description                        |
-+===============+=====================================+====================================+
-| 14:30 - 14:35 | 👋 Welcome and introduction         |                                    |
-+---------------+-------------------------------------+------------------------------------+
-| 14:35 - 14:45 | 🔥 Warming-up with an 🧊 icebreaker | Showcasing a Shiny App integration |
-+---------------+-------------------------------------+------------------------------------+
-| 14:45 - 14:50 | 🫵 Why are you here?                | Expectation management             |
-+---------------+-------------------------------------+------------------------------------+
-| 14:50 - 15:00 | 👓 What you see and what you want   | WYSIWYG versus WYSIWYM             |
-+---------------+-------------------------------------+------------------------------------+
-| 15:00 - 14:10 | 📝 Mastering Markdown               | Getting to know the basics         |
-+---------------+-------------------------------------+------------------------------------+
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| Time          | Title                               | Description                                                                                          |
++===============+=====================================+======================================================================================================+
+| 14:30 - 14:35 | 👋 Welcome and introduction         |                                                                                                      |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| 14:35 - 14:45 | 🔥 Warming-up with an 🧊 icebreaker | Showcasing a Shiny App integration                                                                   |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| 14:45 - 14:50 | 🫵 Why are you here?                | Expectation management                                                                               |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| 14:50 - 15:00 | 👓 What you see and what you want   | WYSIWYG versus WYSIWYM                                                                               |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| 15:00 - 15:10 | 📝 Mastering Markdown               | Getting to know the basics                                                                           |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| 15:10 - 15:20 | 📰 Mastering Quarto                 | Getting to know the basics                                                                           |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| 15:20 - 15:40 | 📰Static Quarto Reports             | Develop skills in building Quarto reports and apply them in hands-on exercises.                      |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
+| 15:40 - 16:00 | 🎥Quarto presentations              | Develop skills in building Quarto presentations with revealjs and apply them in hands-on exercises.  |
++---------------+-------------------------------------+------------------------------------------------------------------------------------------------------+
 
 : Today's session {tbl-colwidths="\[20,35,45\]"}
 :::
@@ -542,9 +546,9 @@ button.addEventListener('click', function() {
 
 Huge range of possibilities:
 
-- As long as it starts with ```` ```{} ```` and ends with ```` ``` ````
+-   As long as it starts with ```` ```{} ```` and ends with ```` ``` ````
 
-- Between the braces, specify the code language (e.g., ```` ```{r} ```` for R code)
+-   Between the braces, specify the code language (e.g., ```` ```{r} ```` for R code)
 
 ## Example of R code embedded
 
@@ -833,7 +837,6 @@ Right
 ```{=html}
 <iframe width="100%" height="75%" src="https://quarto.org/docs/presentations/revealjs/" title="https://quarto.org/docs/presentations/revealjs/"></iframe>
 ```
-
 # 💻Last exercise
 
 1.  Rebuild your own PowerPoint presentation into a revealjs Quarto presentation
@@ -841,7 +844,6 @@ Right
 ## But first
 
 ::: {style="font-size: 85%;"}
-
 **Before further embarking on the Quarto journey**
 
 -   HTML for web publishing: structuring content
@@ -852,7 +854,6 @@ Right
 -   Jupyter for interactive computing: combining code, text, and output
 -   Quarto for computational narratives: creating computational documents
 -   Mermaid for diagrams: creating all sorts of diagrams
-
 :::
 
 ## Quarto advanced and further readings
@@ -861,7 +862,6 @@ Right
 -   [Introduction to Quarto presentation](https://lennartwittkuhn.com/quarto-workshop/#/title-slide)
 -   [Literate programming in R](https://elixir-europe-training.github.io/ELIXIR-TrP-LiterateProgrammingR-CodeRep/)
 -   Add [fontawesome](https://fontawesome.com/) icons to your Quarto with a [lua filter](https://github.com/quarto-ext/fontawesome?tab=readme-ov-file)
-
 
 ::: {style="text-align: center;"}
 # 🤔 Questions
